@@ -7,7 +7,6 @@ build/
 dist/
 pip-wheel-metadata/
 
-
 # dev tools
 
 .envrc
