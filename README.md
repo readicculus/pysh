@@ -1,4 +1,9 @@
+
 # Pysh - a phish.net API client in Python
+![](https://github.com/readicculus/pysh/actions/workflows/main.yml/badge.svg)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Pysh is a Python wrapper for the [phish.net](phish.net) API that can be used to query for Phish songs, 
 setlists, shows, venues, and other phish related data.  This project is not associated with phish.net and you must 
 follow their API's terms of service while using this project.

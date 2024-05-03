@@ -12,13 +12,14 @@ test :
 
 .PHONY : clean
 clean :
-	rm -rf src/pysh/*.egg-info/
+	rm -rf src/*.egg-info
 	rm -rf build/
 	rm -rf dist/
+	rm -rf .coverage
 
 .PHONY : build
 build :
-	rm -rf src/pysh/*.egg-info/
+	rm -rf src/*.egg-info
 	python -m build
 
 .PHONY : release
