@@ -9,6 +9,11 @@ setlists, shows, venues, and other phish related data.  This project is not asso
 follow their API's terms of service while using this project.
 
 This wraps the API described in the [phish.net API v5 Docs](https://docs.phish.net/).
+## Installation
+This package is available on pypi [pysh-client](https://pypi.org/project/pysh-client/) and can be installed by running:
+```bash
+pip install pysh-client
+```
 
 ## Requirements
 #### API Key
