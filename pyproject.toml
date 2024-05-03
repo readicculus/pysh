@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 # See https://setuptools.pypa.io/en/latest/userguide/quickstart.html for more project configuration options.
 name = "pysh-client"
-version = "0.1"
+version = "0.1.0"
 readme = "README.md"
 description = "A phish.net API wrapper in Python."
 classifiers = [

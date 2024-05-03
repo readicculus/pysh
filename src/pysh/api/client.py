@@ -74,13 +74,13 @@ class Endpoint:
             if column.lower() not in attributes:
                 raise ValueError(
                     f"{column.lower()} is not a valid filter column."
-                    f"Api Method {method.value} has the following attributes: {attributes}"
+                    f" Api Method {method.value} has the following attributes: {attributes}"
                 )
         if parameters and parameters.params["order_by"]:
             if parameters.params["order_by"].lower() not in attributes:
                 raise ValueError(
-                    f"{column.lower()} is not a valid order_by attribute."
-                    f"Api Method {method.value} has the following attributes: {attributes}"
+                    f"{column.lower()} is not a valid order_by attribute. "
+                    f" Api Method {method.value} has the following attributes: {attributes}"
                 )
 
 
