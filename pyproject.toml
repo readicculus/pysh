@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -25,12 +25,14 @@ requires-python = ">=3.8"
 dependencies = [
   "requests >= 2.0.0"
 ]
+
 license = {file = "LICENSE"}
 
 [project.urls]
 Homepage = "https://github.com/readicculus/pysh"
 Repository = "https://github.com/readicculus/pysh"
 Changelog = "https://github.com/readicculus/pysh/blob/main/CHANGELOG.md"
+
 
 [project.optional-dependencies]
 dev = [
@@ -70,6 +72,7 @@ include-package-data = true
 
 [tool.setuptools.package-data]
 my_package = ["py.typed"]
+
 
 [tool.black]
 line-length = 100
@@ -117,5 +120,13 @@ python_classes = [
   "Test*",
   "*Test"
 ]
+
+pythonpath = [
+  "src/"
+]
+
+[tool.coverage.run]
+source = ["src"]
+
 log_format = "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
 log_level = "DEBUG"
