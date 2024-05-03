@@ -15,13 +15,13 @@ This wraps the API described in the [phish.net API v5 Docs](https://docs.phish.n
 You will need to setup an API key which requires you have a phish.net account.  
 This library gets the key from the `PHISH_API_KEY` environment variable.  
 Once you have your API key run the following before you can use this library.
-```
+```bash
 export PHISH_API_KEY=xxx
 ```
 You can alternatively pass the API key to the client when constructing it like this:
-```
+```python
 from pysh import Client
-c = Client(apikey=xxx)
+c = Client(apikey="xxx")
 ```
 
 
@@ -40,13 +40,34 @@ define the following optional parameters if desired:
 3. `limit`: number, maximum number of results to return
 4. `no_header`: if requesting data in HTML format, the argument _noheader will suppress the Phish.net banner
 5. `callback`: if requesting data in JSON format, sending a callback will wrap the resulting JSON file in a callback function call
-```
+```python
 from pysh import Parameters, Client
 c = Client()
 c.get_shows(parameters=Parameters(order_by='showdate', direction='desc'))
 ```
 You can read more about each of these parameters in the [Parameters Docs](https://docs.phish.net/#parameters)
 
+## Examples
+
+**Get all shows**
+```python
+c.get_shows()
+```
+
+**Get a Show by Year**
+```python
+c.get_shows(column="showyear", value="2020")
+```
+
+**Get a song by name**
+```python
+c.get_songs(column="slug", value="bug")
+```
+
+**Get a setlist for a show by date**
+```python
+c.get_setlists(column="showdate", value="1984-10-23")
+```
 
 ## Client API Methods
 Below are the currently available API methods usable via this client.  I've not yet added the three 
@@ -105,24 +126,3 @@ List[Dict{'showid', 'showdate', 'permalink', 'showyear', 'uniqueid', 'meta', 're
 
 ---
 
-## Examples
-
-**Get all shows**
-```
-c.get_shows()
-```
-
-**Get a Show by Year**
-```
-c.get_shows(column="showyear", value="2020")
-```
-
-**Get a song by name**
-```
-c.get_songs(column="slug", value="bug")
-```
-
-**Get a setlist for a show by date**
-```
-c.get_setlists(column="showdate", value="1984-10-23")
-```
